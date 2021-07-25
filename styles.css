@@ -50,3 +50,20 @@
   display: inline-block;
   vertical-align: middle;
 }
+
+.skill-item .percent {
+  position: relative;
+  line-height: 1;
+  font-size: 40px;
+  font-weight: 900;
+  z-index: 2;
+}
+
+.skill-item .percent:after {
+  content: attr(data-after);
+  font-size: 20px;
+}
+
+p {
+  font-weight: 900;
+}
