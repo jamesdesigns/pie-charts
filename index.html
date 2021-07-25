@@ -1,64 +1,152 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html> 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pie Charts</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ 
+<title>Pie Chart Examples</title> 
+<link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet"> 
+
+ <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+ 
+   <style>
+    
+     
+
+    </style>
+ 
+  
+  
+ 
 </head>
+
 <body>
-  <div class="b-skills">
-    <div class="container">
-      <h2>Our Skills</h2>
-      <div class="row">
-        <div class="col-md-3">
-          <div class="skill-item center-block">
-            <div class="chart-container">
-              <div class="chart" data-percent="92" data-bar-color="#23afe3">
-                <span class="percent" data-after="%">92</span>
-              </div>
-            </div><br><br>
-            <p>HTML</p>
-          </div>
-        </div>
+ 
+  
+<br><br><br><br>
+	 
+		<section id="s-team" class="section">
+			 
+			<br><br><br>
 
-        <div class="col-md-3">
-          <div class="skill-item center-block">
-            <div class="chart-container">
-              <div class="chart" data-percent="78" data-bar-color="#ad7212">
-                <span class="percent" data-after="%">78</span>
-              </div>
-            </div><br><br>
-            <p>CSS3</p>
-          </div>
-        </div>
+			<div class="b-skills">
+				<div class="container">
+					<h2>Our Skills</h2>
 
-        <div class="col-md-3">
-          <div class="skill-item center-block">
-            <div class="chart-container">
-              <div class="chart" data-percent="66" data-bar-color="#ff4241">
-                <span class="percent" data-after="%">66</span>
-              </div>
-            </div><br><br>
-            <p>Bootstrap</p>
-          </div>
-        </div>
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 col-md-3">
+							<div class="skill-item center-block">
+								<div class="chart-container">
+									<div class="chart " data-percent="92" data-bar-color="#23afe3">
+										<span class="percent" data-after="%">92</span>
+									</div>
+								</div>
 
-        <div class="col-md-3">
-          <div class="skill-item center-block">
-            <div class="chart-container">
-              <div class="chart" data-percent="71" data-bar-color="#edc214">
-                <span class="percent" data-after="%">71</span>
-              </div>
-            </div><br><br>
-            <p>JavaScript</p>
-          </div>
-        </div>
+								<p>HTML</p>
+							</div>
+						</div>
 
-      </div>
-    </div>
-  </div>
+						<div class="col-xs-12 col-sm-6 col-md-3">
+							<div class="skill-item center-block">
+								<div class="chart-container">
+									<div class="chart " data-percent="78" data-bar-color="#a7d212">
+										<span class="percent" data-after="%">78</span>
+									</div>
+								</div>
+
+								<p>CSS3</p>
+							</div>
+						</div>
+
+						<div class="col-xs-12 col-sm-6 col-md-3">
+							<div class="skill-item center-block">
+								<div class="chart-container">
+									<div class="chart " data-percent="95" data-bar-color="#ff4241">
+										<span class="percent" data-after="%">95</span>
+									</div>
+								</div>
+
+								<p>BOOSTRAP</p>
+							</div>
+						</div>
+
+						<div class="col-xs-12 col-sm-6 col-md-3">
+							<div class="skill-item center-block">
+								<div class="chart-container">
+									<div class="chart " data-percent="65" data-bar-color="#edc214">
+										<span class="percent" data-after="%">65</span>
+									</div>
+								</div>
+
+								<p>PHOTOSHOP</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+        <br><br><br><br><br>
+    
+ 
+ 
+  <br><br><br><br>  
+  
+  
+  
+ <script src="plugins/jquery-2.2.4.min.js"></script>
+ <script src="plugins/jquery.appear.min.js"></script>
+ <script src="plugins/jquery.easypiechart.min.js"></script> 
+ <script>
+    'use strict';
+
+var $window = $(window);
+
+function run()
+{
+	var fName = arguments[0],
+		aArgs = Array.prototype.slice.call(arguments, 1);
+	try {
+		fName.apply(window, aArgs);
+	} catch(err) {
+		 
+	}
+};
+ 
+/* chart
+================================================== */
+function _chart ()
+{
+	$('.b-skills').appear(function() {
+		setTimeout(function() {
+			$('.chart').easyPieChart({
+				easing: 'easeOutElastic',
+				delay: 3000,
+				barColor: '#369670',
+				trackColor: '#fff',
+				scaleColor: false,
+				lineWidth: 21,
+				trackWidth: 21,
+				size: 250,
+				lineCap: 'round',
+				onStep: function(from, to, percent) {
+					this.el.children[0].innerHTML = Math.round(percent);
+				}
+			});
+		}, 150);
+	});
+};
+ 
+
+$(document).ready(function() {
+  
+	run(_chart);
+  
+    
+});
+
+
+    
+    </script>
+ 
+   
 </body>
+ 
 </html>
