@@ -1,5 +1,6 @@
  
-.b-skills {
+.b-skills
+{
 	border-top: 1px solid #f9f9f9;
 	padding-top: 46px;
 	text-align: center;
@@ -7,9 +8,10 @@
 
 .b-skills:last-child { margin-bottom: -30px; }
 
-.b-skills h2 { margin-bottom: 50px; font-weight: 900; text-transform: uppercase; }
+.b-skills h2 { margin-bottom: 50px; font-weight: 900; text-transform: uppercase;}
 
-.skill-item {
+.skill-item
+{
 	position: relative;
 	max-width: 250px;
 	width: 100%;
@@ -17,7 +19,8 @@
 	color: #555;
 }
 
-.chart-container {
+.chart-container
+{
 	position: relative;
 	width: 100%;
 	height: 0;
@@ -26,7 +29,8 @@
 }
 
 .skill-item .chart,
-.skill-item .chart canvas {
+.skill-item .chart canvas
+{
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -34,19 +38,22 @@
 	height: 100% !important;
 }
 
-.skill-item .chart:before {
+.skill-item .chart:before
+{
 	content: "";
 	width: 0;
 	height: 100%;
 }
 
 .skill-item .chart:before,
-.skill-item .percent {
+.skill-item .percent
+{
 	display: inline-block;
 	vertical-align: middle;
 }
 
-.skill-item .percent {
+.skill-item .percent
+{
 	position: relative;
 	line-height: 1;
 	font-size: 40px;
@@ -54,11 +61,13 @@
 	z-index: 2;
 }
 
-.skill-item  .percent:after {
+.skill-item  .percent:after
+{
 	content: attr(data-after);
 	font-size: 20px;
 }
        
-p { font-weight: 900; }
+       p{
+           font-weight: 900;
+       }
  
-    
